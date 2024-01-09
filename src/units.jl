@@ -22,8 +22,8 @@ function _register_unit(name::Symbol, value)
     s = string(name)
     return quote
         const $name = $value
-        push!(_UNIT_SYMBOLS, Symbol($s))
-        push!(_UNIT_VALUES, $name)
+        push!($_UNIT_SYMBOLS, Symbol($s))
+        push!($_UNIT_VALUES, $name)
     end
 end
 
